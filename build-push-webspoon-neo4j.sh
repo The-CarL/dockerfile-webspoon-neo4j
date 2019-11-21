@@ -11,5 +11,5 @@ then
   mkdir data
 fi
 
-docker build --no-cache -f Dockerfile.webspoon-neo4j -t mattcasters/webspoon-neo4j:latest . && \
-docker push mattcasters/webspoon-neo4j:latest
+docker build --no-cache -f Dockerfile.webspoon-neo4j -t carl92/webspoon-neo4j:latest . && \
+docker push carl92/webspoon-neo4j:latest

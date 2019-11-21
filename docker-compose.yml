@@ -10,16 +10,14 @@ services:
     ports:
       - "7474:7474"
       - "7687:7687"
-    volumes:
-      - ./data:/data
     networks: 
       - backend
   webspoon:
     depends_on:
       - neo
-    image: mattcasters/webspoon-neo4j:latest
+    image: carl92/webspoon-neo4j:latest
     environment:
-     - "JAVA_OPTS=-Xms12g -Xmx12g -DNEO4J_LOGGING_CONNECTION=Demo"
+     - "JAVA_OPTS=-Xms4g -Xmx4g -DNEO4J_LOGGING_CONNECTION=Demo"
     ports:
       - "8080:8080"
     links:
